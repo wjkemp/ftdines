@@ -1,0 +1,14 @@
+[Unit]
+Description=FTDI NES controller service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ftdines
+WorkingDirectory=/tmp
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
